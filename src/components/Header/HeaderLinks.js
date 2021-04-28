@@ -12,7 +12,16 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import { Apps, CloudDownload, Home, Info, ContactMail, HomeOutlined, HomeWork, GetApp } from "@material-ui/icons";
+import {
+  Apps,
+  CloudDownload,
+  Home,
+  Info,
+  ContactMail,
+  HomeOutlined,
+  HomeWork,
+  GetApp,
+} from "@material-ui/icons";
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
@@ -23,43 +32,35 @@ import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
+  const [selectedItem, setSelectedItem] = React.useState(props.selectedItem);
+
+  const handleListItemClick = (item) => {
+    setSelectedItem(item);
+  };
+
   const classes = useStyles();
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
-      <Button
-          href="/landing-page"
+      <ListItem
+        className={classes.listItem}
+        selected={selectedItem === "Home"}
+        onClick={() => handleListItemClick("Home")}
+      >
+        <Button
+          href="/"
           color="transparent"
           // target="_blank"
           className={classes.navLink}
+          selected
         >
           <Home className={classes.icons} /> Главная
         </Button>
       </ListItem>
-      <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="Материалы"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={GetApp}
-          dropdownList={[
-            <Link to="/" className={classes.dropdownLink}>
-              Математика  
-            </Link>,
-            <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation?ref=mkr-navbar"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Физика
-            </a>
-          ]}
-        />
-      </ListItem>
-      <ListItem className={classes.listItem}>
+      <ListItem
+        className={classes.listItem}
+        selected={selectedItem === "About"}
+        onClick={() => handleListItemClick("About")}
+      >
         <Button
           href="/profile-page"
           color="transparent"
@@ -69,9 +70,32 @@ export default function HeaderLinks(props) {
           <Info className={classes.icons} /> Обо мне
         </Button>
       </ListItem>
+      <ListItem
+        className={classes.listItem}
+        selected={selectedItem === "Materials"}
+        onClick={() => handleListItemClick("Materials")}
+      >
+        <CustomDropdown
+          noLiPadding
+          buttonText="Материалы"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent",
+          }}
+          buttonIcon={GetApp}
+          dropdownList={[
+            <Link to="/math-page" className={classes.dropdownLink}>
+              Математика
+            </Link>,
+            <Link to="/physics-page" className={classes.dropdownLink}>
+              Физика
+            </Link>,
+          ]}
+        />
+      </ListItem>
       <ListItem className={classes.listItem}>
-      <Button
-          href="/landing-page"
+        <Button
+          href="/#form"
           color="transparent"
           // target="_blank"
           className={classes.navLink}
@@ -79,12 +103,12 @@ export default function HeaderLinks(props) {
           <ContactMail className={classes.icons} /> Контакты
         </Button>
       </ListItem>
-      <ListItem className={classes.listItem}>
-        {/*<Tooltip title="Delete">
+      {/* <ListItem className={classes.listItem}>
+        <Tooltip title="Delete">
           <IconButton aria-label="Delete">
             <DeleteIcon />
           </IconButton>
-        </Tooltip>*/}
+        </Tooltip>
         <Tooltip
           id="instagram-twitter"
           title="Follow us on twitter"
@@ -134,7 +158,7 @@ export default function HeaderLinks(props) {
             <i className={classes.socialIcons + " fab fa-instagram"} />
           </Button>
         </Tooltip>
-      </ListItem>
+      </ListItem> */}
     </List>
   );
 }

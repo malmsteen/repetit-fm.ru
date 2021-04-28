@@ -6,63 +6,68 @@ import {
   infoColor,
   roseColor,
   grayColor,
-  title
+  title,
 } from "assets/jss/material-kit-react.js";
 
 const infoStyle = {
   infoArea: {
     maxWidth: "360px",
     margin: "0 auto",
-    padding: "0px"
+    padding: "0px",
   },
   iconWrapper: {
     float: "left",
     marginTop: "24px",
-    marginRight: "10px"
+    marginRight: "10px",
   },
   primary: {
-    color: primaryColor
+    color: primaryColor,
   },
   warning: {
-    color: warningColor
+    color: warningColor,
   },
   danger: {
-    color: dangerColor
+    color: dangerColor,
   },
   success: {
-    color: successColor
+    color: successColor,
   },
   info: {
-    color: infoColor
+    color: infoColor,
   },
   rose: {
-    color: roseColor
+    color: roseColor,
   },
   gray: {
-    color: grayColor
+    color: grayColor,
   },
   icon: {
     width: "36px",
-    height: "36px"
+    height: "36px",
+    "&:hover": {
+      width: "65px",
+      height: "65px",
+      transition: "all 300ms ease 0s",
+    },
   },
   descriptionWrapper: {
     color: grayColor,
-    overflow: "hidden"
+    overflow: "hidden",
   },
   title,
   description: {
-    color: grayColor,
+    color: "#657b83",
     overflow: "hidden",
     marginTop: "0px",
-    fontSize: "14px"
+    fontSize: "14px",
   },
   iconWrapperVertical: {
-    float: "none"
+    float: "none",
   },
   iconVertical: {
     width: "61px",
-    height: "61px"
-  }
+    height: "61px",
+  },
 };
 
 export default infoStyle;

@@ -2,7 +2,7 @@ const parallaxStyle = {
   parallax: {
     height: "90vh",
     maxHeight: "1000px",
-    overflow: "hidden",
+    overflow: "visible",
     position: "relative",
     backgroundPosition: "center center",
     backgroundSize: "cover",
@@ -10,11 +10,11 @@ const parallaxStyle = {
     padding: "0",
     border: "0",
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
   },
   filter: {
     "&:before": {
-      background: "rgba(0, 0, 0, 0.5)"
+      background: "rgba(0, 0, 0, 0.5)",
     },
     "&:after,&:before": {
       position: "absolute",
@@ -24,12 +24,12 @@ const parallaxStyle = {
       display: "block",
       left: "0",
       top: "0",
-      content: "''"
-    }
+      content: "''",
+    },
   },
   small: {
-    height: "380px"
-  }
+    height: "380px",
+  },
 };
 
 export default parallaxStyle;

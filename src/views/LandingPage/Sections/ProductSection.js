@@ -6,6 +6,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Chat from "@material-ui/icons/Chat";
 import VerifiedUser from "@material-ui/icons/VerifiedUser";
 import Fingerprint from "@material-ui/icons/Fingerprint";
+import { ReactComponent as MathIcon } from "../../../fx.svg";
+import { ReactComponent as physicsIcon } from "../../../pendulum.svg";
+import { ReactComponent as expertIcon } from "../../../einstein.svg";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -21,13 +24,15 @@ export default function ProductSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Let{"'"}s talk product</h2>
+          <h2 className={classes.title}>О проекте</h2>
           <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            product. Keep you user engaged by providing meaningful information.
-            Remember that by this time, the user is curious, otherwise he wouldn
-            {"'"}t scroll to get here. Add a button if you want the user to see
-            more.
+            За время подготовки к занятиям у меня накопилось большое количество
+            материалов - статей и подборок задач, которые я собираю и составляю
+            сам, литература которую я использую и рекомендую учащимся. На этом
+            сайте я буду рад ими с вами поделиться. Возможно вам их будет
+            достаточно, если вы предпочитаете заниматься самостоятельно. Либо вы
+            можете записаться ко мне на занятия. Работаю я как онлайн, так и
+            оффлайн.
           </h5>
         </GridItem>
       </GridContainer>
@@ -35,28 +40,29 @@ export default function ProductSection() {
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Free Chat"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Chat}
-              iconColor="info"
+              title="Математика"
+              description="Подготовка к олимпиадам, к ЕГЭ и ОГЭ, повышение уровня"
+              icon={MathIcon}
+              iconColor="rose"
               vertical
             />
+            {/* <MathIcon/> */}
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Verified Users"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={VerifiedUser}
+              title="Физика"
+              description="Подготовка к олимпиадам, к ЕГЭ и ОГЭ, повышение уровня"
+              icon={physicsIcon}
               iconColor="success"
               vertical
             />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Fingerprint"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Fingerprint}
-              iconColor="danger"
+              title="занятия с экспертом ЕГЭ"
+              description="Разбор основных ошибок, приемы решения задач, контрольные работы и обратная связь"
+              icon={expertIcon}
+              iconColor="success"
               vertical
             />
           </GridItem>

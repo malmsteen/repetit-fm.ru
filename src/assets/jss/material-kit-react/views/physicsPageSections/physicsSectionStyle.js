@@ -1,28 +1,18 @@
 import { container, title } from "assets/jss/material-kit-react.js";
 
-import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
-
-const profilePageStyle = {
-  container,
-  profile: {
-    textAlign: "center",
-    "& img": {
-      maxWidth: "160px",
-      width: "100%",
-      margin: "0 auto",
-      transform: "translate3d(0, -50%, 0)",
-    },
+const physicsSectionStyle = {
+  container: {
+    zIndex: "12",
+    color: "#657B83",
+    paddingTop: "50px",
+    ...container,
   },
   description: {
     margin: "1.071rem auto 0",
     maxWidth: "600px",
-    color: "#657B83",
+    color: "#999",
     textAlign: "center !important",
   },
-  name: {
-    marginTop: "-80px",
-  },
-  ...imagesStyle,
   main: {
     background: "#FDF6E3",
     position: "relative",
@@ -30,8 +20,8 @@ const profilePageStyle = {
   },
   mainRaised: {
     margin: "-60px 30px 0px",
-    paddingBottom: "20px",
     borderRadius: "6px",
+    paddingBottom: "16px",
     boxShadow:
       "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
   },
@@ -39,7 +29,7 @@ const profilePageStyle = {
     ...title,
     display: "inline-block",
     position: "relative",
-    marginTop: "30px",
+    marginTop: "auto",
     minHeight: "32px",
     textDecoration: "none",
   },
@@ -52,12 +42,21 @@ const profilePageStyle = {
     height: "100%",
     lineHeight: "41px",
     fontSize: "20px",
+    color: "#999",
+  },
+  uList: {
+    listStyle: "square",
     color: "#657B83",
   },
-  navWrapper: {
-    margin: "20px auto 50px auto",
-    textAlign: "center",
+  anchor: {
+    color: "#2AA198",
+    "&:hover": {
+      color: "#B83B5E",
+    },
+  },
+  mainTitle: {
+    color: "#FFFFFF",
   },
 };
 
-export default profilePageStyle;
+export default physicsSectionStyle;
