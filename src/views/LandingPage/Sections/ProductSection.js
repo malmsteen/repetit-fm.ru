@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react'
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles'
 
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
-import { ReactComponent as MathIcon } from "../../../fx.svg";
-import { ReactComponent as physicsIcon } from "../../../pendulum.svg";
-import { ReactComponent as expertIcon } from "../../../einstein.svg";
+import Chat from '@material-ui/icons/Chat'
+import VerifiedUser from '@material-ui/icons/VerifiedUser'
+import Fingerprint from '@material-ui/icons/Fingerprint'
+import { ReactComponent as MathIcon } from '../../../fx.svg'
+import { ReactComponent as physicsIcon } from '../../../pendulum.svg'
+import { ReactComponent as expertIcon } from '../../../einstein.svg'
 // core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import InfoArea from "components/InfoArea/InfoArea.js";
+import GridContainer from 'components/Grid/GridContainer.js'
+import GridItem from 'components/Grid/GridItem.js'
+import InfoArea from 'components/InfoArea/InfoArea.js'
 
-import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
+import styles from 'assets/jss/material-kit-react/views/landingPageSections/productStyle.js'
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(styles)
 
-export default function ProductSection() {
-  const classes = useStyles();
+export default function ProductSection () {
+  const classes = useStyles()
   return (
     <div className={classes.section}>
-      <GridContainer justify="center">
+      <GridContainer justify='center'>
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>О проекте</h2>
           <h5 className={classes.description}>
@@ -40,34 +40,34 @@ export default function ProductSection() {
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Математика"
-              description="Подготовка к олимпиадам, к ЕГЭ и ОГЭ, повышение уровня"
+              title='Математика'
+              description='Подготовка к олимпиадам, к ЕГЭ и ОГЭ, к дополнительным вступительным испытаниям в МГУ, повышение уровня'
               icon={MathIcon}
-              iconColor="rose"
+              iconColor='rose'
               vertical
             />
             {/* <MathIcon/> */}
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Физика"
-              description="Подготовка к олимпиадам, к ЕГЭ и ОГЭ, повышение уровня"
+              title='Физика'
+              description='Подготовка к олимпиадам, к ЕГЭ и ОГЭ, повышение уровня'
               icon={physicsIcon}
-              iconColor="success"
+              iconColor='success'
               vertical
             />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="занятия с экспертом ЕГЭ"
-              description="Разбор основных ошибок, приемы решения задач, контрольные работы и обратная связь"
+              title='занятия с экспертом ЕГЭ'
+              description='Разбор основных ошибок, приемы решения задач, контрольные работы и обратная связь'
               icon={expertIcon}
-              iconColor="success"
+              iconColor='success'
               vertical
             />
           </GridItem>
         </GridContainer>
       </div>
     </div>
-  );
+  )
 }

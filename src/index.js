@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
-import Latex from "components/Latex";
+// import Latex from "components/Latex/Latex.js";
 import "assets/scss/material-kit-react.scss";
 
 // pages for this product
@@ -16,7 +16,7 @@ import PhysicsPage from "views/PhysicsPage/PhysicsPage.js";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Latex>
+  // <Latex>
     <Router history={hist}>
       <Switch>
         {/* <Route path="/landing-page" component={LandingPage} /> */}
@@ -25,8 +25,9 @@ ReactDOM.render(
         <Route path="/math-page" component={MathPage} />
         <Route path="/physics-page" component={PhysicsPage} />
         <Route path="/profile-page" component={ProfilePage} />
+        <Route path="/allcomponents" component={Components}/>
       </Switch>
-    </Router>
-  </Latex>,
+    </Router>,
+  // </Latex>,
   document.getElementById("root")
 );

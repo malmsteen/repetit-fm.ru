@@ -39,15 +39,21 @@ const featuresStyle = {
   },
   videoBG: {
     background: '#faba5a',
-    marginTop: '15%',
+    position: 'absolute',
+    padding: '0 5%',
+    left: '0%',
+    top: '50%',
+    transform: 'translateY(-50%)',
     borderRadius: '50%',
     width: '100%',
     height: 'auto',
     aspectRatio: '1/1',
     // position: 'absolute',
     zIndex: '0',
-    '@media (max-width: 943px)': {
-      margin: 'auto'
+    '@media (max-width: 940px)': {
+      margin: 'auto',
+      position: 'static',
+      transform: 'none'
     }
   },
   centerVideo: {

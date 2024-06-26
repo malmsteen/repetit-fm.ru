@@ -19,7 +19,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import CustomLinearProgress from "components/CustomLinearProgress/CustomLinearProgress.js";
-import Paginations from "components/Pagination/Pagination.js";
+import Pagination from "components/Pagination/Pagination.js";
 import Badge from "components/Badge/Badge.js";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
@@ -555,7 +555,7 @@ export default function SectionBasics() {
               <div className={classes.title}>
                 <h3>Pagination</h3>
               </div>
-              <Paginations
+              <Pagination
                 pages={[
                   { text: 1 },
                   { text: "..." },
@@ -568,7 +568,7 @@ export default function SectionBasics() {
                   { text: 12 }
                 ]}
               />
-              <Paginations
+              <Pagination
                 pages={[
                   { text: "PREV" },
                   { text: 1 },

@@ -52,6 +52,7 @@ export default function Footer(props) {
                   target="_blank"
                   color="transparent"
                   className={classes.navLink}
+                  disabled
                 >
                   <i className={classes.socialIcons + " fab fa-twitter"} />
                 </Button>
@@ -86,6 +87,7 @@ export default function Footer(props) {
                   href=""
                   target="_blank"
                   className={classes.navLink}
+                  disabled
                 >
                   <i className={classes.socialIcons + " fab fa-instagram"} />
                 </Button>
@@ -156,12 +158,12 @@ export default function Footer(props) {
           </List>
         </div> */}
         <div className={classes.right}>
-          &copy; {new Date().getFullYear()} , made with{" "}
+          &copy; {new Date().getFullYear()}, made with{" "}
           <Favorite className={classes.icon} /> by site owner with{" "}
           <a href="https://www.creative-tim.com/" target="_blank">
-            creative.tim
+            creative.tim{" "}
           </a>
-          .
+          for a better web
         </div>
       </div>
     </footer>

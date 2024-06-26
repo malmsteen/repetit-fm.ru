@@ -1,37 +1,38 @@
-import { title } from "assets/jss/material-kit-react.js";
+import { title } from 'assets/jss/material-kit-react.js'
 
 const workStyle = {
   section: {
-    padding: "70px 0",
+    padding: '70px 0',
+    textAlign: 'center'
   },
   title: {
     ...title,
-    marginBottom: "50px",
-    marginTop: "30px",
-    minHeight: "32px",
-    textDecoration: "none",
-    textAlign: "center",
+    marginBottom: '50px',
+    marginTop: '30px',
+    minHeight: '32px',
+    textDecoration: 'none',
+    textAlign: 'center'
   },
   textLeft: {
-    textAlign: "left",
+    textAlign: 'left'
   },
   textRight: {
-    textAlign: "right",
+    textAlign: 'right'
   },
   h4: {
-    textAlign: "right",
+    textAlign: 'right'
   },
   description: {
-    color: "#657b83",
-    textAlign: "center",
+    color: '#657b83',
+    textAlign: 'center'
   },
   textCenter: {
-    textAlign: "center",
+    textAlign: 'center'
   },
   textArea: {
-    marginRight: "15px",
-    marginLeft: "15px",
-  },
-};
+    marginRight: '15px',
+    marginLeft: '15px'
+  }
+}
 
-export default workStyle;
+export default workStyle
